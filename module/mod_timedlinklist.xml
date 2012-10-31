@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>Timed Link List Module</name>
+	<author>Aldo S. Praherda</author>
+	<creationDate>September 2012</creationDate>
+	<copyright>(C) 2012</copyright>
+	<license>GPL</license>
+	<authorEmail>aldopraherda@gmail.com</authorEmail>
+	<authorUrl>www.coralynweb.com</authorUrl>
+	<version>1.0</version>
+	<description>This module will display link from com_timedlinklist</description>
+	<files>
+		<filename module="mod_timedlinklist">mod_timedlinklist.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_timedlinklist.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_timedlinklist.ini</language>		
+	</languages>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="maxlinktoshow"
+					type="text"
+					default="3"
+					label="No of link to show"
+					description="No of link to show">					
+				</field>
+				<field
+					name="maxchartoshow"
+					type="text"
+					default="62"
+					label="Max character on link"
+					description="Max character on link">					
+				</field>
+				<field
+					name="maxitem"
+					type="text"
+					default="5"
+					label="Max Item"
+					description="Max item">					
+				</field>
+				<field
+					name="order"
+					type="radio"
+					default="0"
+					label="Order by"
+					description="Order by">		
+					<option value="0">Created</option>
+					<option value="1">Most Read</option>
+					<option value="2">Ordering</option>
+					<option value="3">Random</option>			
+				</field>
+				<field
+					name="order_type"
+					type="radio"
+					default="asc"
+					label="Order type"
+					description="Order type">					
+					<option value="asc">Ascending</option>
+					<option value="desc">Descending</option>
+				</field>
+				<field
+					name="bottomtext"
+					type="text"
+					default=""
+					label="Bottom Text"
+					filter="safehtml"
+					description="Bottom Text">					
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
