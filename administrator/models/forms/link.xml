@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="id_type" type="Type"
+				label="COM_TIMEDLINKLIST_FORM_LBL_LINK_ID_TYPE" 
+				description="COM_TIMEDLINKLIST_FORM_DESC_LINK_ID_TYPE"               
+                 required="true" 
+                 >                 
+		</field>
+
+       <field name="title" type="text" size="40" class="inputbox"
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_TITLE" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_TITLE" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+
+       <field name="url" type="text" size="40" class="inputbox"
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_URL" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_URL" 
+                
+                 required="true" 
+                filter="safehtml" /> 
+	<field name="article_id" type="Modal_Article"
+                label="COM_TIMEDLINKLIST_FORM_LBL_LINK_ARTICLE_ID"
+                required="false"
+                description="COM_TIMEDLINKLIST_FORM_DESC_LINK_ARTICLE_ID"
+            />
+		<field name="mymenuitem" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />     
+		
+       <field name="date_created" type="calendar" class="inputbox"
+                 required="true" 
+                
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_DATE_CREATED" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_DATE_CREATED" 
+                filter="safehtml" /> 
+
+       <field name="date_modified" type="calendar" class="inputbox"
+                 required="true" 
+                
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_DATE_MODIFIED" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_DATE_MODIFIED" 
+                filter="safehtml" /> 
+		<field name="date_start_publishing" type="calendar" class="inputbox"
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_DATE_START_PUBLISHING" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_DATE_START_PUBLISHING" 
+                filter="safehtml"   required="true" /> 
+       <field name="date_finish_publishing" type="calendar" class="inputbox"
+                 label="COM_TIMEDLINKLIST_FORM_LBL_LINK_DATE_FINISH_PUBLISHING" description="COM_TIMEDLINKLIST_FORM_DESC_LINK_DATE_FINISH_PUBLISHING" 
+                filter="safehtml" /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>
